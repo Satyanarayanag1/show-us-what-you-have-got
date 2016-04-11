@@ -1,0 +1,48 @@
+
+create table Admin (Admin varchar2(10),pwd varchar2(10));
+insert into Admin values ('Admin','pwd');
+
+
+
+create table Student(Reg_NO number(10) primary key, 
+Name varchar2(30)not null,Course varchar2(5),Batch varchar(10));
+
+
+create table Faculty(Fac_Id varchar2(10)primary key,
+FName varchar2(30)not null,Designation varchar2(20));
+
+
+create table Books_stock (Book_Id number(10) primary key,Book_Title varchar2(35)not null,
+Author  varchar2(20),Publisher varchar2(20), Edition varchar2(10),Inv_No Number(10),Inv_Date date,
+Cost number(7,2));
+
+
+create table Book_Issue1(Reg_No number(10),Book_Id number(10)primary key,
+Book_Title varchar2(50),I_date date,F_date date,R_date date,Penalty number(5));
+
+create table Book_Issue2(Fac_Id number(10),Book_Id number(10)primary key,
+Book_Title varchar2(50),I_date date,F_date date,R_date date,Penalty number(5));
+
+
+
+
+create table Cds_stock (Cd_Id number(10) primary key,Cd_Title varchar2(20)not null,
+Inv_No Number(10),Inv_Date date,
+Cost number(7,2));
+
+create table Cd_Issue1(Reg_No number(10),Cd_Id number(10)primary key,
+Cd_Title varchar2(50)not null,I_date date,F_date date,R_date date,Penalty number(5));
+
+
+create table Cd_Issue2(Fac_Id number(10),Cd_Id number(10)primary key,
+Cd_Title varchar2(50)not null,I_date date,F_date date,R_date date,Penalty number(5));
+
+
+
+
+
+
+
+
+
+
